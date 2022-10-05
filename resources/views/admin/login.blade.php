@@ -84,6 +84,8 @@
                                     </div>
                                 </form>
                             </div>
+
+                            <span style="padding-left: 20px;"><b>Email:</b> admin@gmail.com&nbsp;&nbsp; <b>Password:</b> 12345</span>
                         </div>
                     </div>
                 </div>
@@ -93,6 +95,8 @@
 </div>
 
 @include('admin.layout.scripts_footer')
+
+
 
 </body>
 </html>

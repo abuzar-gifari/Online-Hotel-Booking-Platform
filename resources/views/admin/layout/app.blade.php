@@ -50,5 +50,43 @@
 
 @include('admin.layout.scripts_footer')
 
+
+
+<!-- iziToast functionality code here -->
+@if ($errors->any())
+    @foreach ($errors->all() as $error)
+        <script>
+            iziToast.error({
+                title: '',
+                position: 'topRight',
+                message: '{{ $error }}',
+            });
+        </script>
+    @endforeach
+@endif
+
+@if (session()->get('error'))
+    <script>
+        iziToast.error({
+            title: '',
+            position: 'topRight',
+            message: '{{ session()->get('error') }}',
+        });
+    </script>
+@endif
+
+@if (session()->get('success_message'))
+    <script>
+        iziToast.success({
+            title: '',
+            position: 'topRight',
+            message: '{{ session()->get('success_message') }}',
+        });
+    </script>
+@endif
+<!--// iziToast functionality code here -->
+
+
+
 </body>
 </html>

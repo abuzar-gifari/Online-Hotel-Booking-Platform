@@ -1,5 +1,3 @@
-
-
 <!-- jQuery 3.6.0 -->
 <script src="{{ asset('dist/js/jquery-3.6.0.min.js') }}"></script>
 

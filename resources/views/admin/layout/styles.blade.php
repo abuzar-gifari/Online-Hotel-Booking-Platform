@@ -1,4 +1,3 @@
-
 <!-- Bootstrap 5 -->
 <link rel="stylesheet" href="{{ asset('dist/css/bootstrap.min.css') }}"/>
 
