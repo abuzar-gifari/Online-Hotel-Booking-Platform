@@ -13,5 +13,7 @@ Route::get('/', function () {
 
 /**-----------------------------------  Admin ROUTES   -----------------------------------------------**/
 
-Route::get('/home',[AdminHomeController::class,'index'])->name('admin_home');
+Route::get('/home',[AdminHomeController::class,'index'])->name('admin_home')->middleware('admin:admin');
 Route::get('/login',[AdminLoginController::class,'index'])->name('admin_login');
+Route::get('/logout',[AdminLoginController::class,'logout'])->name('admin_logout');
+Route::post('/login/submit',[AdminLoginController::class,'login_submit'])->name('admin_login_submit');
