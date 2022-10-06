@@ -29,7 +29,7 @@
                                     <td>{{ $row->name }}</td>
                                     <td>${{ $row->price }}</td>
                                     <td class="pt_10 pb_10">
-                                        <button class="btn btn-success" data-toggle="modal" data-target="#exampleModal1">Detail</button>
+                                        <button class="btn btn-success" data-toggle="modal" data-target="#exampleModal{{ $i }}">Detail</button>
                                         <a href="{{ route('admin_room_edit',$row->id) }}" class="btn btn-primary">Edit</a>
                                         <a href="{{ route('admin_room_delete',$row->id) }}" class="btn btn-danger" onClick="return confirm('Are you sure?');">Delete</a>
                                     </td>
@@ -88,6 +88,7 @@
                                                                 $temp_row = \App\Models\Amenity::where('id',$arr[$j])->first();
                                                                 echo $temp_row->name.'<br>';
                                                             }
+                                                            
                                                         @endphp
                                                     </div>
                                                 </div>
