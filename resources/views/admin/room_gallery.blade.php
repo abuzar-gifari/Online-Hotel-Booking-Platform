@@ -8,7 +8,6 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="text-center">Create Room Gallery</h4>
                         @csrf
                         <div class="form-group mb-3">
                             <label class="form-label">Photo</label>
