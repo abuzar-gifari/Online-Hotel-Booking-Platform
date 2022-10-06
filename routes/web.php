@@ -4,6 +4,7 @@
 
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AdminLoginController;
+use App\Http\Controllers\Admin\AdminRoomController;
 use App\Http\Controllers\Admin\AmenityController;
 use App\Http\Controllers\Front\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -33,6 +34,31 @@ Route::post('/admin/amenity/update/{id}',[AmenityController::class,'update'])->n
 
 // Amenity Data Delete
 Route::get('/admin/amenity/delete/{id}',[AmenityController::class,'delete'])->name('admin_amenity_delete');
+
+
+/* Room */
+
+// Show Room Page
+Route::get('/admin/room/show',[AdminRoomController::class,'show'])->name('admin_room_show')->middleware('admin:admin');
+
+// Create Room Page
+Route::get('/admin/room/create',[AdminRoomController::class,'create'])->name('admin_room_create')->middleware('admin:admin');
+
+// Room Submit/Store
+Route::post('/admin/room/store',[AdminRoomController::class,'store'])->name('admin_room_store');
+
+// Room Edit Page Show
+Route::get('/admin/room/edit/{id}',[AdminRoomController::class,'edit'])->name('admin_room_edit')->middleware('admin:admin');
+
+// Room Update
+Route::post('/admin/room/update/{id}',[AdminRoomController::class,'update'])->name('admin_room_update');
+
+// Room Data Delete
+Route::get('/admin/room/delete/{id}',[AdminRoomController::class,'delete'])->name('admin_room_delete');
+
+
+
+
 
 
 
