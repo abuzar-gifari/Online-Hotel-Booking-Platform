@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\AdminLoginController;
 use App\Http\Controllers\Admin\AdminRoomController;
 use App\Http\Controllers\Admin\AmenityController;
 use App\Http\Controllers\Front\HomeController;
+use App\Http\Controllers\Front\RoomController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -14,6 +15,24 @@ use Illuminate\Support\Facades\Route;
 /**-----------------------------------  Frontend ROUTES   --------------------------------------------**/
 
 Route::get('/',[HomeController::class,'index'])->name('home');
+
+Route::get('/room/{id}',[RoomController::class,'single_room'])->name('room_detail');
+
+Route::get('/rooms',[RoomController::class,'rooms'])->name('rooms');
+
+
+
+
+
+/**-----------------------------------  Admin ROUTES   -----------------------------------------------**/
+
+Route::get('admin/home',[AdminHomeController::class,'index'])->name('admin_home')->middleware('admin:admin');
+
+Route::get('admin/login',[AdminLoginController::class,'index'])->name('admin_login');
+
+Route::post('/login/submit',[AdminLoginController::class,'login_submit'])->name('admin_login_submit');
+
+Route::get('admin/logout',[AdminLoginController::class,'logout'])->name('admin_logout');
 
 /* Room Amenity */
 
@@ -61,13 +80,3 @@ Route::get('/admin/room/gallery/{id}',[AdminRoomController::class,'gallery'])->n
 Route::post('/admin/room/gallery/store/{id}',[AdminRoomController::class,'gallery_store'])->name('admin_room_gallery_store');
 
 Route::get('/admin/room/gallery/delete/{id}',[AdminRoomController::class,'gallery_delete'])->name('admin_room_gallery_delete');
-
-
-
-
-/**-----------------------------------  Admin ROUTES   -----------------------------------------------**/
-
-Route::get('admin/home',[AdminHomeController::class,'index'])->name('admin_home')->middleware('admin:admin');
-Route::get('admin/login',[AdminLoginController::class,'index'])->name('admin_login');
-Route::post('/login/submit',[AdminLoginController::class,'login_submit'])->name('admin_login_submit');
-Route::get('admin/logout',[AdminLoginController::class,'logout'])->name('admin_logout');
