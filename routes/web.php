@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\Front\RoomController;
 use App\Http\Controllers\Admin\AmenityController;
+use App\Http\Controllers\Front\BookingController;
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AdminRoomController;
 use App\Http\Controllers\Admin\AdminLoginController;
@@ -20,10 +21,11 @@ use App\Http\Controllers\Customer\CustomerProfileController;
 /**-----------------------------------  Frontend Routes   --------------------------------------------**/
 
 Route::get('/',[HomeController::class,'index'])->name('home');
-
 Route::get('/room/{id}',[RoomController::class,'single_room'])->name('room_detail');
-
 Route::get('/rooms',[RoomController::class,'rooms'])->name('rooms');
+Route::post('/booking/submit', [BookingController::class, 'cart_submit'])->name('cart_submit');
+Route::get('/cart', [BookingController::class, 'cart_view'])->name('cart');
+Route::get('/cart/delete/{id}', [BookingController::class, 'cart_delete'])->name('cart_delete');
 
 /**------------------------------------ End Frontend Routes   ----------------------------------------**/
 
