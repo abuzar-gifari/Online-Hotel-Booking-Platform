@@ -42,8 +42,8 @@
                         <ul class="right">
                             <li class="menu"><a href="cart.html">Cart</a></li>
                             <li class="menu"><a href="checkout.html">Checkout</a></li>
-                            <li class="menu"><a href="signup.html">Sign Up</a></li>
-                            <li class="menu"><a href="login.html">Login</a></li>
+                            <li class="menu"><a href="{{ route('customer_signup') }}">Sign Up</a></li>
+                            <li class="menu"><a href="{{ route('customer_login') }}">Login</a></li>
                         </ul>
                     </div>
                 </div>
@@ -84,7 +84,8 @@
             @endforeach
         @endif
 
-        @if (session()->get('error'))
+        
+        @if(session()->get('error'))
             <script>
                 iziToast.error({
                     title: '',
@@ -94,15 +95,16 @@
             </script>
         @endif
 
-        @if (session()->get('success_message'))
+        @if(session()->get('success'))
             <script>
                 iziToast.success({
                     title: '',
                     position: 'topRight',
-                    message: '{{ session()->get('success_message') }}',
+                    message: '{{ session()->get('success') }}',
                 });
             </script>
         @endif
+        
         <!--// iziToast functionality code here -->
 
 

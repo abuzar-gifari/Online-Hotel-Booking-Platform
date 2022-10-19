@@ -44,11 +44,10 @@ return [
             'driver' => 'session',
             'provider' => 'admins',
         ],
-        // 'author' => [
-        //     'driver' => 'session',
-        //     'provider' => 'authors',
-        // ],
-        // driver is session bcz when admin is login his information will be stored in the session.
+        'customer' => [
+            'driver' => 'session',
+            'provider' => 'customers',
+        ],
     ],
 
     /*
@@ -73,16 +72,14 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
-
         'admins' => [
             'driver' => 'eloquent',
             'model' => App\Models\Admin::class,
         ],
-
-        // 'authors' => [
-        //     'driver' => 'eloquent',
-        //     'model' => App\Models\Author::class,
-        // ],
+        'customers' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Customer::class,
+        ],
 
         // 'users' => [
         //     'driver' => 'database',
@@ -118,12 +115,12 @@ return [
             'expire' => 60,
             'throttle' => 60,
         ],
-        // 'authors' => [
-        //     'provider' => 'authors',
-        //     'table' => 'password_resets',
-        //     'expire' => 60,
-        //     'throttle' => 60,
-        // ],
+        'customers' => [
+            'provider' => 'customers',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
     ],
 
     /*

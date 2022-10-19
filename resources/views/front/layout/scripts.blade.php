@@ -9,6 +9,7 @@
 <script src="{{ asset('dist-front/js/sweetalert2.min.js') }}"></script>
 <script src="{{ asset('dist-front/js/jquery.waypoints.min.js') }}"></script>
 <script src="{{ asset('dist-front/js/acmeticker.js') }}"></script>
+<script src="{{ asset('dist-front/js/iziToast.min.js') }}"></script>
 <script src="{{ asset('dist-front/js/moment.min.js') }}"></script>
 <script src="{{ asset('dist-front/js/daterangepicker.min.js') }}"></script>
 <script src="{{ asset('dist-front/js/sticky_sidebar.js') }}"></script>

@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="{{ asset('dist-front/css/select2-bootstrap.min.css') }}">
 <link rel="stylesheet" href="{{ asset('dist-front/css/sweetalert2.min.css') }}">
 <link rel="stylesheet" href="{{ asset('dist-front/css/spacing.css') }}">
+<!-- iziToast CSS -->
+<link rel="stylesheet" href="{{ asset('dist-front/css/iziToast.min.css') }}">
+<link rel="stylesheet" href="{{ asset('dist-front/css/fontawesome-iconpicker.min.css') }}">
+<link rel="stylesheet" href="{{ asset('dist-front/css/bootstrap4-toggle.min.css') }}">
+
 <link rel="stylesheet" href="{{ asset('dist-front/css/font-awesome.min.css') }}">
 <link rel="stylesheet" href="{{ asset('dist-front/css/daterangepicker.css') }}">
 <link rel="stylesheet" href="{{ asset('dist-front/css/meanmenu.css') }}">
