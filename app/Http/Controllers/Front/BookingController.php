@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Front;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class BookingController extends Controller
 {
@@ -98,6 +99,20 @@ class BookingController extends Controller
 
         return redirect()->back()->with('success', 'Cart item is deleted.');
 
+    }
+
+    
+    public function checkout()
+    {
+        if(!Auth::guard('customer')->check()) {
+            return redirect()->back()->with('error', 'You must have to login in order to checkout');
+        }
+
+        if(!session()->has('cart_room_id')) {
+            return redirect()->back()->with('error', 'There is no item in the cart');
+        }
+
+        return view('front.checkout');
     }
 
 }

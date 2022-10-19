@@ -41,7 +41,7 @@
                     <div class="col-md-6 right-side">
                         <ul class="right">
                             <li class="menu"><a href="{{ route('cart') }}">Cart</a></li>
-                            <li class="menu"><a href="checkout.html">Checkout</a></li>
+                            <li class="menu"><a href="{{ route('checkout') }}">Checkout</a></li>
                             <li class="menu"><a href="{{ route('customer_signup') }}">Sign Up</a></li>
                             <li class="menu"><a href="{{ route('customer_login') }}">Login</a></li>
                         </ul>

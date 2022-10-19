@@ -26,6 +26,8 @@ Route::get('/rooms',[RoomController::class,'rooms'])->name('rooms');
 Route::post('/booking/submit', [BookingController::class, 'cart_submit'])->name('cart_submit');
 Route::get('/cart', [BookingController::class, 'cart_view'])->name('cart');
 Route::get('/cart/delete/{id}', [BookingController::class, 'cart_delete'])->name('cart_delete');
+Route::get('/checkout', [BookingController::class, 'checkout'])->name('checkout');
+Route::post('/payment', [BookingController::class, 'payment'])->name('payment');
 
 /**------------------------------------ End Frontend Routes   ----------------------------------------**/
 
