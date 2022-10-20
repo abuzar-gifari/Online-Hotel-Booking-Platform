@@ -1,0 +1,23 @@
+Developer Account: 
+Email: hotelbooking2022@gmail.com
+Password: TheBigHotel2022
+
+
+https://www.sandbox.paypal.com/signin
+
+Sandbox - Personal:
+thehotel_sandbox@per.com
+TheBigHotel2022
+
+Sandbox - Business:
+thehotel_sandbox@biz.com
+TheBigHotel2022
+
+
+API Credential:
+APP Name: THE_HOTEL_APP_NEW / THE_HOTEL_APP_SANDBOX
+thehotel_sandbox@biz.com
+Client ID:
+AVxAVMrGZpPkOfwWKX0uR4e8aXiM8aKNA_Z3C-Q6xyYLeFwxnvn2S2XlLni2ActwHcxS5tEHEq9ax09Z
+Secret:
+ENFrPoyFqY32KGoRzOYRJRc9pVjlP6p6xvQNBnQY24MZ8US_G97pYf3RR3mZCOuD4A3t6_AaYDn1AZ8C

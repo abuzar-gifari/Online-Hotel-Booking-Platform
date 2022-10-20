@@ -1,4 +1,4 @@
-{{-- @extends('admin.layout.app')
+@extends('admin.layout.app')
 
 @section('heading', 'Rooms (Booked and Available) for '.$selected_date)
 
@@ -51,4 +51,4 @@
         </div>
     </div>
 </div>
-@endsection --}}
+@endsection

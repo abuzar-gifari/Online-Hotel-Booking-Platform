@@ -20,7 +20,7 @@
                     @csrf
                     <div class="billing-info">
                         <h4 class="mb_30">Billing Information</h4>
-                        {{-- @php
+                        @php
                         if(session()->has('billing_name')) {
                             $billing_name = session()->get('billing_name');
                         } else {
@@ -68,7 +68,7 @@
                         } else {
                             $billing_zip = Auth::guard('customer')->user()->zip;
                         }
-                        @endphp --}}
+                        @endphp
                         <div class="row">
                             <div class="col-lg-6">
                                 <label for="">Name: *</label>
