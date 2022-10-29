@@ -7,11 +7,16 @@ use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\Front\RoomController;
 use App\Http\Controllers\Admin\AmenityController;
 use App\Http\Controllers\Front\BookingController;
+use App\Http\Controllers\Admin\AdminFaqController;
 use App\Http\Controllers\Admin\AdminHomeController;
+use App\Http\Controllers\Admin\AdminPostController;
 use App\Http\Controllers\Admin\AdminRoomController;
 use App\Http\Controllers\Admin\AdminLoginController;
+use App\Http\Controllers\Admin\AdminVideoController;
+use App\Http\Controllers\Admin\AdminFeatureController;
 use App\Http\Controllers\Customer\CustomerAuthController;
 use App\Http\Controllers\Customer\CustomerHomeController;
+use App\Http\Controllers\Admin\AdminTestimonialController;
 use App\Http\Controllers\Admin\AdminDatewiseRoomController;
 use App\Http\Controllers\Customer\CustomerProfileController;
 
@@ -87,45 +92,33 @@ Route::get('admin/logout',[AdminLoginController::class,'logout'])->name('admin_l
 Route::group(['middleware'=>['admin:admin']],function(){
 
     
-    /* Room Amenity */
+    /* Room Amenities */
 
-    // Show Amenity Page
     Route::get('/admin/amenity/show',[AmenityController::class,'show'])->name('admin_amenity_show');
 
-    // Create Amenity Page
     Route::get('/admin/amenity/create',[AmenityController::class,'create'])->name('admin_amenity_create');
 
-    // Amenity Submit/Store
     Route::post('/admin/amenity/store',[AmenityController::class,'store'])->name('admin_amenity_store');
 
-    // Amenity Edit Page Show
     Route::get('/admin/amenity/edit/{id}',[AmenityController::class,'edit'])->name('admin_amenity_edit');
 
-    // Amenity Update
     Route::post('/admin/amenity/update/{id}',[AmenityController::class,'update'])->name('admin_amenity_update');
 
-    // Amenity Data Delete
     Route::get('/admin/amenity/delete/{id}',[AmenityController::class,'delete'])->name('admin_amenity_delete');
 
 
     /* Room */
 
-    // Show Room Page
     Route::get('/admin/room/show',[AdminRoomController::class,'show'])->name('admin_room_show');
-
-    // Create Room Page
+    
     Route::get('/admin/room/create',[AdminRoomController::class,'create'])->name('admin_room_create');
 
-    // Room Submit/Store
     Route::post('/admin/room/store',[AdminRoomController::class,'store'])->name('admin_room_store');
 
-    // Room Edit Page Show
     Route::get('/admin/room/edit/{id}',[AdminRoomController::class,'edit'])->name('admin_room_edit');
 
-    // Room Update
     Route::post('/admin/room/update/{id}',[AdminRoomController::class,'update'])->name('admin_room_update');
 
-    // Room Data Delete
     Route::get('/admin/room/delete/{id}',[AdminRoomController::class,'delete'])->name('admin_room_delete');
 
     Route::get('/admin/room/gallery/{id}',[AdminRoomController::class,'gallery'])->name('admin_room_gallery');
@@ -139,7 +132,98 @@ Route::group(['middleware'=>['admin:admin']],function(){
     Route::post('/admin/datewise-rooms/submit', [AdminDatewiseRoomController::class, 'show'])->name('admin_datewise_rooms_submit');
 
 
+    
+    /* Features */
 
+    Route::get('/admin/feature/view', [AdminFeatureController::class, 'index'])->name('admin_feature_view');
+
+    Route::get('/admin/feature/add', [AdminFeatureController::class, 'add'])->name('admin_feature_add');
+    
+    Route::post('/admin/feature/store', [AdminFeatureController::class, 'store'])->name('admin_feature_store');
+    
+    Route::get('/admin/feature/edit/{id}', [AdminFeatureController::class, 'edit'])->name('admin_feature_edit');
+    
+    Route::post('/admin/feature/update/{id}', [AdminFeatureController::class, 'update'])->name('admin_feature_update');
+    
+    Route::get('/admin/feature/delete/{id}', [AdminFeatureController::class, 'delete'])->name('admin_feature_delete');
+
+
+
+    /* Testimonials */
+
+    Route::get('/admin/testimonial/view', [AdminTestimonialController::class, 'index'])->name('admin_testimonial_view');
+
+    Route::get('/admin/testimonial/add', [AdminTestimonialController::class, 'add'])->name('admin_testimonial_add');
+    
+    Route::post('/admin/testimonial/store', [AdminTestimonialController::class, 'store'])->name('admin_testimonial_store');
+    
+    Route::get('/admin/testimonial/edit/{id}', [AdminTestimonialController::class, 'edit'])->name('admin_testimonial_edit');
+    
+    Route::post('/admin/testimonial/update/{id}', [AdminTestimonialController::class, 'update'])->name('admin_testimonial_update');
+    
+    Route::get('/admin/testimonial/delete/{id}', [AdminTestimonialController::class, 'delete'])->name('admin_testimonial_delete');
+
+
+
+    /* Post */
+
+    Route::get('/admin/post/view', [AdminPostController::class, 'index'])->name('admin_post_view');
+    
+    Route::get('/admin/post/add', [AdminPostController::class, 'add'])->name('admin_post_add');
+    
+    Route::post('/admin/post/store', [AdminPostController::class, 'store'])->name('admin_post_store');
+    
+    Route::get('/admin/post/edit/{id}', [AdminPostController::class, 'edit'])->name('admin_post_edit');
+    
+    Route::post('/admin/post/update/{id}', [AdminPostController::class, 'update'])->name('admin_post_update');
+    
+    Route::get('/admin/post/delete/{id}', [AdminPostController::class, 'delete'])->name('admin_post_delete');
+
+    
+    /* Photos */
+
+    Route::get('/admin/photo/view', [AdminPhotoController::class, 'index'])->name('admin_photo_view');
+    
+    Route::get('/admin/photo/add', [AdminPhotoController::class, 'add'])->name('admin_photo_add');
+    
+    Route::post('/admin/photo/store', [AdminPhotoController::class, 'store'])->name('admin_photo_store');
+    
+    Route::get('/admin/photo/edit/{id}', [AdminPhotoController::class, 'edit'])->name('admin_photo_edit');
+    
+    Route::post('/admin/photo/update/{id}', [AdminPhotoController::class, 'update'])->name('admin_photo_update');
+    
+    Route::get('/admin/photo/delete/{id}', [AdminPhotoController::class, 'delete'])->name('admin_photo_delete');
+
+
+    /* Videos */
+
+    Route::get('/admin/video/view', [AdminVideoController::class, 'index'])->name('admin_video_view');
+    
+    Route::get('/admin/video/add', [AdminVideoController::class, 'add'])->name('admin_video_add');
+    
+    Route::post('/admin/video/store', [AdminVideoController::class, 'store'])->name('admin_video_store');
+    
+    Route::get('/admin/video/edit/{id}', [AdminVideoController::class, 'edit'])->name('admin_video_edit');
+    
+    Route::post('/admin/video/update/{id}', [AdminVideoController::class, 'update'])->name('admin_video_update');
+    
+    Route::get('/admin/video/delete/{id}', [AdminVideoController::class, 'delete'])->name('admin_video_delete');
+
+
+
+    /* Faqs */
+
+    Route::get('/admin/faq/view', [AdminFaqController::class, 'index'])->name('admin_faq_view');
+    
+    Route::get('/admin/faq/add', [AdminFaqController::class, 'add'])->name('admin_faq_add');
+    
+    Route::post('/admin/faq/store', [AdminFaqController::class, 'store'])->name('admin_faq_store');
+    
+    Route::get('/admin/faq/edit/{id}', [AdminFaqController::class, 'edit'])->name('admin_faq_edit');
+    
+    Route::post('/admin/faq/update/{id}', [AdminFaqController::class, 'update'])->name('admin_faq_update');
+    
+    Route::get('/admin/faq/delete/{id}', [AdminFaqController::class, 'delete'])->name('admin_faq_delete');
 
 
 });

@@ -37,6 +37,7 @@ class BookingController extends Controller
         $checkin_date = $dates[0];
         $checkout_date = $dates[1];
         
+        // Put The Requested Data Into Session
         session()->push('cart_room_id',$request->room_id);
         session()->push('cart_checkin_date',$checkin_date);
         session()->push('cart_checkout_date',$checkout_date);
@@ -494,6 +495,7 @@ class BookingController extends Controller
 
         Mail::to($customer_email)->send(new Websitemail($subject,$message));
 
+        // Delete Session Data
         session()->forget('cart_room_id');
         session()->forget('cart_checkin_date');
         session()->forget('cart_checkout_date');
@@ -512,8 +514,6 @@ class BookingController extends Controller
 
 
     }
-
-
 
 
 
