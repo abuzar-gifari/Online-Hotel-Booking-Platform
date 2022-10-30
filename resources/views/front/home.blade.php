@@ -2,6 +2,13 @@
 
 @section('main_content')
 
+
+
+
+
+
+<!-- Slider Portion -->
+
 <div class="slider">
     <div class="slide-carousel owl-carousel">
         <div class="item" style="background-image:url(uploads/slide1.jpg);">
@@ -31,6 +38,18 @@
     </div>
 </div>
         
+<!--// Slider Portion -->
+
+
+
+
+
+
+
+
+
+
+<!-- User Search Portion -->
 
 <div class="search-section">
     <div class="container">
@@ -72,7 +91,17 @@
     </div>
 </div>
 
+<!--// User Search Portion -->
 
+
+
+
+
+
+
+
+
+<!-- Feature Postion -->
 
 <div class="home-feature">
     <div class="container">
@@ -169,11 +198,18 @@
     </div>
 </div>
 
+<!--// Feature Postion -->
 
 
 
 
 
+
+
+
+
+
+<!-- Rooms and Suites Portion -->
 
 <div class="home-rooms">
     <div class="container">
@@ -220,6 +256,7 @@
     </div>
 </div>
 
+<!--// Rooms and Suites Portion -->
 
 
 
@@ -227,11 +264,7 @@
 
 
 
-
-
-
-
-
+<!-- Testimonial Portion -->
 
 <div class="testimonial" style="background-image: url(uploads/slide2.jpg)">
     <div class="bg"></div>
@@ -278,8 +311,17 @@
     </div>
 </div>
 
+<!--// Testimonial Portion -->
 
 
+
+
+
+
+
+
+
+<!-- Post Portion -->
 
 <div class="blog-item">
     <div class="container">
@@ -347,4 +389,17 @@
     </div>
 </div>
 
-@endsection
+<!--// Post Portion -->
+
+
+
+
+
+
+
+
+
+
+@endsection 
+
+{{-------------------------------------------- End Section --------------------------------------------}}
