@@ -3,30 +3,53 @@
 // () {} []
 
 use Illuminate\Support\Facades\Route;
+
+// Frontend Routes
+use App\Http\Controllers\Front\FaqController;
 use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\Front\RoomController;
+use App\Http\Controllers\Front\AboutController;
+use App\Http\Controllers\Front\PhotoController;
+use App\Http\Controllers\Front\TermsController;
+use App\Http\Controllers\Front\VideoController;
 use App\Http\Controllers\Admin\AmenityController;
 use App\Http\Controllers\Front\BookingController;
+use App\Http\Controllers\Front\ContactController;
+use App\Http\Controllers\Front\SubscriberController;
+
+// Admin Routes
 use App\Http\Controllers\Admin\AdminFaqController;
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AdminPostController;
 use App\Http\Controllers\Admin\AdminRoomController;
 use App\Http\Controllers\Admin\AdminLoginController;
+use App\Http\Controllers\Admin\AdminPhotoController;
 use App\Http\Controllers\Admin\AdminVideoController;
 use App\Http\Controllers\Admin\AdminFeatureController;
-use App\Http\Controllers\Customer\CustomerAuthController;
-use App\Http\Controllers\Customer\CustomerHomeController;
 use App\Http\Controllers\Admin\AdminTestimonialController;
 use App\Http\Controllers\Admin\AdminDatewiseRoomController;
+
+// Customer Routes
 use App\Http\Controllers\Customer\CustomerProfileController;
-
-
+use App\Http\Controllers\Customer\CustomerAuthController;
+use App\Http\Controllers\Customer\CustomerHomeController;
 
 
 
 /**-----------------------------------  Frontend Routes   --------------------------------------------**/
 
 Route::get('/',[HomeController::class,'index'])->name('home');
+Route::get('/about', [AboutController::class, 'index'])->name('about');
+Route::get('/blog', [BlogController::class, 'index'])->name('blog');
+Route::get('/post/{id}', [BlogController::class, 'single_post'])->name('post');
+Route::get('/photo-gallery', [PhotoController::class, 'index'])->name('photo_gallery');
+Route::get('/video-gallery', [VideoController::class, 'index'])->name('video_gallery');
+Route::get('/faq', [FaqController::class, 'index'])->name('faq');
+Route::get('/terms-and-conditions', [TermsController::class, 'index'])->name('terms');
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::post('/contact/send-email', [ContactController::class, 'send_email'])->name('contact_send_email');
+Route::post('/subscriber/send-email', [SubscriberController::class, 'send_email'])->name('subscriber_send_email');
+Route::get('/subscriber/verify/{email}/{token}', [SubscriberController::class, 'verify'])->name('subscriber_verify');
 Route::get('/room/{id}',[RoomController::class,'single_room'])->name('room_detail');
 Route::get('/rooms',[RoomController::class,'rooms'])->name('rooms');
 Route::post('/booking/submit', [BookingController::class, 'cart_submit'])->name('cart_submit');
@@ -46,7 +69,7 @@ Route::post('/payment/stripe/{price}', [BookingController::class, 'stripe'])->na
 /**------------------------------------- Customer Routes ---------------------------------------------**/
 
 
-/* Customer */
+/* Customer - Authentication Related */
 Route::get('/login', [CustomerAuthController::class, 'login'])->name('customer_login');
 Route::post('/login-submit', [CustomerAuthController::class, 'login_submit'])->name('customer_login_submit');
 Route::get('/customer/logout', [CustomerAuthController::class, 'logout'])->name('customer_logout');
@@ -76,7 +99,7 @@ Route::group(['middleware' =>['customer:customer']], function(){
 
 /**-----------------------------------  Admin Routes   -----------------------------------------------**/
 
-/* Admin */
+/* Admin - Authentication Related */
 Route::get('admin/home',[AdminHomeController::class,'index'])->name('admin_home')->middleware('admin:admin');
 
 Route::get('admin/login',[AdminLoginController::class,'index'])->name('admin_login');
