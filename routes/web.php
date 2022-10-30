@@ -15,24 +15,25 @@ use App\Http\Controllers\Front\VideoController;
 use App\Http\Controllers\Admin\AmenityController;
 use App\Http\Controllers\Front\BookingController;
 use App\Http\Controllers\Front\ContactController;
-use App\Http\Controllers\Front\SubscriberController;
+use App\Http\Controllers\Admin\AdminFaqController;
 
 // A-L-L   A-D-M-I-N    R-O-U-T-E
-use App\Http\Controllers\Admin\AdminFaqController;
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AdminPostController;
 use App\Http\Controllers\Admin\AdminRoomController;
 use App\Http\Controllers\Admin\AdminLoginController;
 use App\Http\Controllers\Admin\AdminPhotoController;
 use App\Http\Controllers\Admin\AdminVideoController;
+use App\Http\Controllers\Front\SubscriberController;
 use App\Http\Controllers\Admin\AdminFeatureController;
-use App\Http\Controllers\Admin\AdminTestimonialController;
-use App\Http\Controllers\Admin\AdminDatewiseRoomController;
-
-// A-L-L   C-U-S-T-O-M-E-R    R-O-U-T-E
-use App\Http\Controllers\Customer\CustomerProfileController;
 use App\Http\Controllers\Customer\CustomerAuthController;
 use App\Http\Controllers\Customer\CustomerHomeController;
+
+// A-L-L   C-U-S-T-O-M-E-R    R-O-U-T-E
+use App\Http\Controllers\Admin\AdminTestimonialController;
+use App\Http\Controllers\Customer\CustomerOrderController;
+use App\Http\Controllers\Admin\AdminDatewiseRoomController;
+use App\Http\Controllers\Customer\CustomerProfileController;
 
 
 
@@ -93,6 +94,8 @@ Route::group(['middleware' =>['customer:customer']], function(){
     Route::get('/customer/home', [CustomerHomeController::class, 'index'])->name('customer_home');
     Route::get('/customer/edit-profile', [CustomerProfileController::class, 'index'])->name('customer_profile');
     Route::post('/customer/edit-profile-submit', [CustomerProfileController::class, 'profile_submit'])->name('customer_profile_submit');
+    Route::get('/customer/order/view', [CustomerOrderController::class, 'index'])->name('customer_order_view');
+    Route::get('/customer/invoice/{id}', [CustomerOrderController::class, 'invoice'])->name('customer_invoice');
 });
 
 /**-------------------------------  E-N-D   C-U-S-T-O-M-E-R   R-O-U-T-E  -----------------------------**/
