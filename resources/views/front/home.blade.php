@@ -19,7 +19,7 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt libero voluptate, veritatis esse dolorem soluta.
                 </p>
                 <div class="button">
-                    <a href="">Read More</a>
+                    <a href="{{ route('about') }}">Read More</a>
                 </div>
             </div>
         </div>
