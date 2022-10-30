@@ -26,13 +26,13 @@ use App\Http\Controllers\Admin\AdminVideoController;
 use App\Http\Controllers\Front\SubscriberController;
 use App\Http\Controllers\Admin\AdminFeatureController;
 use App\Http\Controllers\Admin\AdminCustomerController;
+use App\Http\Controllers\Admin\AdminTestimonialController;
+use App\Http\Controllers\Admin\AdminDatewiseRoomController;
 
 // A-L-L   C-U-S-T-O-M-E-R    R-O-U-T-E
 use App\Http\Controllers\Customer\CustomerAuthController;
 use App\Http\Controllers\Customer\CustomerHomeController;
-use App\Http\Controllers\Admin\AdminTestimonialController;
 use App\Http\Controllers\Customer\CustomerOrderController;
-use App\Http\Controllers\Admin\AdminDatewiseRoomController;
 use App\Http\Controllers\Customer\CustomerProfileController;
 
 

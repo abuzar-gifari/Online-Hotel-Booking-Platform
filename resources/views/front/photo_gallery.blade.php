@@ -1,6 +1,6 @@
 @extends('front.layout.app')
 
-@section('content')
+@section('main_content')
 <div class="page-top">
     <div class="bg"></div>
     <div class="container">
@@ -17,20 +17,103 @@
         <div class="photo-gallery">
             <div class="row">
 
-                @foreach($photo_all as $item)
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="photo-thumb">
-                        <img src="{{ asset('uploads/'.$item->photo) }}" alt="">
+                        <img src="uploads/n1.jpg" alt="">
                         <div class="bg"></div>
                         <div class="icon">
-                            <a href="{{ asset('uploads/'.$item->photo) }}" class="magnific"><i class="fa fa-plus"></i></a>
+                            <a href="uploads/n1.jpg" class="magnific"><i class="fa fa-plus"></i></a>
                         </div>
                     </div>
                     <div class="photo-caption">
-                        {{ $item->caption }}
+                        Haaland scores before going off injured in Dortmund win and it is very real
                     </div>
                 </div>
-                @endforeach
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="photo-thumb">
+                        <img src="uploads/n2.jpg" alt="">
+                        <div class="bg"></div>
+                        <div class="icon">
+                            <a href="uploads/n2.jpg" class="magnific"><i class="fa fa-plus"></i></a>
+                        </div>
+                    </div>
+                    <div class="photo-caption">
+                        Haaland scores before going off injured in Dortmund win and it is very real
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="photo-thumb">
+                        <img src="uploads/n3.jpg" alt="">
+                        <div class="bg"></div>
+                        <div class="icon">
+                            <a href="uploads/n3.jpg" class="magnific"><i class="fa fa-plus"></i></a>
+                        </div>
+                    </div>
+                    <div class="photo-caption">
+                        Haaland scores before going off injured in Dortmund win and it is very real
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="photo-thumb">
+                        <img src="uploads/n4.jpg" alt="">
+                        <div class="bg"></div>
+                        <div class="icon">
+                            <a href="uploads/n4.jpg" class="magnific"><i class="fa fa-plus"></i></a>
+                        </div>
+                    </div>
+                    <div class="photo-caption">
+                        Haaland scores before going off injured in Dortmund win and it is very real
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="photo-thumb">
+                        <img src="uploads/n1.jpg" alt="">
+                        <div class="bg"></div>
+                        <div class="icon">
+                            <a href="uploads/n1.jpg" class="magnific"><i class="fa fa-plus"></i></a>
+                        </div>
+                    </div>
+                    <div class="photo-caption">
+                        Haaland scores before going off injured in Dortmund win and it is very real
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="photo-thumb">
+                        <img src="uploads/n2.jpg" alt="">
+                        <div class="bg"></div>
+                        <div class="icon">
+                            <a href="uploads/n2.jpg" class="magnific"><i class="fa fa-plus"></i></a>
+                        </div>
+                    </div>
+                    <div class="photo-caption">
+                        Haaland scores before going off injured in Dortmund win and it is very real
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="photo-thumb">
+                        <img src="uploads/n3.jpg" alt="">
+                        <div class="bg"></div>
+                        <div class="icon">
+                            <a href="uploads/n3.jpg" class="magnific"><i class="fa fa-plus"></i></a>
+                        </div>
+                    </div>
+                    <div class="photo-caption">
+                        Haaland scores before going off injured in Dortmund win and it is very real
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="photo-thumb">
+                        <img src="uploads/n4.jpg" alt="">
+                        <div class="bg"></div>
+                        <div class="icon">
+                            <a href="uploads/n4.jpg" class="magnific"><i class="fa fa-plus"></i></a>
+                        </div>
+                    </div>
+                    <div class="photo-caption">
+                        Haaland scores before going off injured in Dortmund win and it is very real
+                    </div>
+                </div>
+
 
 
                 <div class="col-md-12">
