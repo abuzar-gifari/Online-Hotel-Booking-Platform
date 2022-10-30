@@ -34,8 +34,8 @@
                 <div class="row">
                     <div class="col-md-6 left-side">
                         <ul>
-                            <li class="phone-text">111-222-3333</li>
-                            <li class="email-text">contact@arefindev.com</li>
+                            <li class="phone-text">+8801783753653</li>
+                            <li class="email-text">shaikh35-3024@diu.edu.bd</li>
                         </ul>
                     </div>
                     <div class="col-md-6 right-side">

@@ -1,7 +1,5 @@
 <?php
 
-// () {} []
-
 use Illuminate\Support\Facades\Route;
 
 // A-L-L   F-R-O-N-T-E-N-D    R-O-U-T-E

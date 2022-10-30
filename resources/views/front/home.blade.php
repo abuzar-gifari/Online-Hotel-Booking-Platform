@@ -337,10 +337,10 @@
                         <img src="uploads/1.jpg" alt="">
                     </div>
                     <div class="text">
-                        <h2><a href="post.html">This is a sample blog post title</a></h2>
+                        <h2><a href="post.html">King Room - SGL - Traditional Comfort</a></h2>
                         <div class="short-des">
                             <p>
-                                If you want to get some good contents from the people of your country then just contribute into the main community of your people and I am sure you will be benfitted from that. 
+                                These rooms generally have the largest bed in a property. Typically, standard king size mattresses are 80 inches long (or about 203 centimetres) and 76 inches wide (or about 193 centimetres).
                             </p>
                         </div>
                         <div class="button">
@@ -355,10 +355,10 @@
                         <img src="uploads/2.jpg" alt="">
                     </div>
                     <div class="text">
-                        <h2><a href="post.html">This is a sample blog post title</a></h2>
+                        <h2><a href="post.html">Deluxe Double Room in Dhaka</a></h2>
                         <div class="short-des">
                             <p>
-                                If you want to get some good contents from the people of your country then just contribute into the main community of your people and I am sure you will be benfitted from that. 
+                                Mainly designed to accommodate the needs of guests that wish to share a bed. There are a few differences between hotels and motels, a standard double room contains one king-size bed.
                             </p>
                         </div>
                         <div class="button">
@@ -373,10 +373,10 @@
                         <img src="uploads/3.jpg" alt="">
                     </div>
                     <div class="text">
-                        <h2><a href="post.html">This is a sample blog post title</a></h2>
+                        <h2><a href="post.html">Standard Queen Room - The Grove Inn</a></h2>
                         <div class="short-des">
                             <p>
-                                If you want to get some good contents from the people of your country then just contribute into the main community of your people and I am sure you will be benfitted from that. 
+                                Rooms range from standard, with one queen bed, to deluxe, with a king bed, for those who would like some extra space. A few rooms have enough floor space to fit a third bed, such as if traveling with a child.
                             </p>
                         </div>
                         <div class="button">

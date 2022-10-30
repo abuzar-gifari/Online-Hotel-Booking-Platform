@@ -7,7 +7,6 @@
                 <ul class="useful-links">
                     <li><a href="rooms.html">Rooms & Suites</a></li>
                     <li><a href="photo-gallery.html">Photo Gallery</a></li>
-                    <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
@@ -33,8 +32,8 @@
                         <i class="fa fa-map-marker"></i>
                     </div>
                     <div class="right">
-                        34 Antiger Lane,<br>
-                        PK Lane, USA, 12937
+                        Mirpur-13,<br>
+                        Road-08, Block-C, 1214
                     </div>
                 </div>
                 <div class="list-item">
@@ -42,7 +41,7 @@
                         <i class="fa fa-volume-control-phone"></i>
                     </div>
                     <div class="right">
-                        contact@arefindev.com
+                        shaikh35-3024@diu.edu.bd
                     </div>
                 </div>
                 <div class="list-item">
@@ -50,7 +49,7 @@
                         <i class="fa fa-envelope-o"></i>
                     </div>
                     <div class="right">
-                        122-222-1212
+                        +8801783753653
                     </div>
                 </div>
                 <ul class="social">
@@ -85,7 +84,7 @@
 </div>
 
 <div class="copyright">
-Copyright 2022, ArefinDev. All Rights Reserved.
+Copyright 2022, AbuzarGifari. All Rights Reserved.
 </div>
 
 <div class="scroll-top">

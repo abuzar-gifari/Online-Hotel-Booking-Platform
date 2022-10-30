@@ -10,7 +10,6 @@ class AboutController extends Controller
 {
     public function index()
     {
-        $about_data = Page::where('id',1)->first();
-        return view('front.about', compact('about_data'));
+        return view('front.about');
     }
 }
