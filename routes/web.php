@@ -22,14 +22,16 @@ use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AdminPostController;
 use App\Http\Controllers\Admin\AdminRoomController;
 use App\Http\Controllers\Admin\AdminLoginController;
+use App\Http\Controllers\Admin\AdminOrderController;
 use App\Http\Controllers\Admin\AdminPhotoController;
 use App\Http\Controllers\Admin\AdminVideoController;
 use App\Http\Controllers\Front\SubscriberController;
 use App\Http\Controllers\Admin\AdminFeatureController;
-use App\Http\Controllers\Customer\CustomerAuthController;
-use App\Http\Controllers\Customer\CustomerHomeController;
+use App\Http\Controllers\Admin\AdminCustomerController;
 
 // A-L-L   C-U-S-T-O-M-E-R    R-O-U-T-E
+use App\Http\Controllers\Customer\CustomerAuthController;
+use App\Http\Controllers\Customer\CustomerHomeController;
 use App\Http\Controllers\Admin\AdminTestimonialController;
 use App\Http\Controllers\Customer\CustomerOrderController;
 use App\Http\Controllers\Admin\AdminDatewiseRoomController;
@@ -162,6 +164,21 @@ Route::group(['middleware'=>['admin:admin']],function(){
 
 
 
+    /* C U S T O M E R */
+    
+    Route::get('/admin/customers', [AdminCustomerController::class, 'index'])->name('admin_customer');
+    Route::get('/admin/customer/change-status/{id}', [AdminCustomerController::class, 'change_status'])->name('admin_customer_change_status');
+
+
+
+    /* C U S T O M E R    O R D E R */
+
+    Route::get('/admin/order/view', [AdminOrderController::class, 'index'])->name('admin_orders');
+    Route::get('/admin/order/invoice/{id}', [AdminOrderController::class, 'invoice'])->name('admin_invoice');
+    Route::get('/admin/order/delete/{id}', [AdminOrderController::class, 'delete'])->name('admin_order_delete');
+
+
+
     /* T E S T I M O N I A L */
 
     Route::get('/admin/testimonial/view', [AdminTestimonialController::class, 'index'])->name('admin_testimonial_view');
@@ -181,6 +198,7 @@ Route::group(['middleware'=>['admin:admin']],function(){
     Route::get('/admin/post/edit/{id}', [AdminPostController::class, 'edit'])->name('admin_post_edit');
     Route::post('/admin/post/update/{id}', [AdminPostController::class, 'update'])->name('admin_post_update');
     Route::get('/admin/post/delete/{id}', [AdminPostController::class, 'delete'])->name('admin_post_delete');
+
 
     
     /* P H O T O */

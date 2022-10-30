@@ -14,7 +14,7 @@
                     <h4>Completed Orders</h4>
                 </div>
                 <div class="card-body">
-                    {{-- {{ $total_completed_orders }} --}}
+                    {{ $total_completed_orders }}
                 </div>
             </div>
         </div>
@@ -29,7 +29,7 @@
                     <h4>Pending Orders</h4>
                 </div>
                 <div class="card-body">
-                    {{-- {{ $total_pending_orders }} --}}
+                    {{ $total_pending_orders }}
                 </div>
             </div>
         </div>
@@ -44,7 +44,7 @@
                     <h4>Active Customers</h4>
                 </div>
                 <div class="card-body">
-                    {{-- {{ $total_active_customers }} --}}
+                    {{ $total_active_customers }}
                 </div>
             </div>
         </div>
@@ -59,7 +59,7 @@
                     <h4>Pending Customers</h4>
                 </div>
                 <div class="card-body">
-                    {{-- {{ $total_pending_customers }} --}}
+                    {{ $total_pending_customers }}
                 </div>
             </div>
         </div>
@@ -74,7 +74,7 @@
                     <h4>Total Rooms</h4>
                 </div>
                 <div class="card-body">
-                    {{-- {{ $total_rooms }} --}}
+                    {{ $total_rooms }}
                 </div>
             </div>
         </div>
@@ -89,7 +89,7 @@
                     <h4>Total Subscribers</h4>
                 </div>
                 <div class="card-body">
-                    {{-- {{ $total_subscribers }} --}}
+                    {{ $total_subscribers }}
                 </div>
             </div>
         </div>
@@ -121,7 +121,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {{-- @foreach($orders as $row)
+                                        @foreach($orders as $row)
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
                                             <td>{{ $row->order_no }}</td>
@@ -133,7 +133,7 @@
                                                 <a href="{{ route('admin_order_delete',$row->id) }}" class="btn btn-danger" onClick="return confirm('Are you sure?');">Delete</a>
                                             </td>
                                         </tr>
-                                        @endforeach --}}
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
