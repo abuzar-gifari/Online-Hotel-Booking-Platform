@@ -25,14 +25,16 @@ use App\Http\Controllers\Admin\AdminPhotoController;
 use App\Http\Controllers\Admin\AdminVideoController;
 use App\Http\Controllers\Front\SubscriberController;
 use App\Http\Controllers\Admin\AdminFeatureController;
+use App\Http\Controllers\Admin\AdminProfileController;
 use App\Http\Controllers\Admin\AdminCustomerController;
-use App\Http\Controllers\Admin\AdminTestimonialController;
-use App\Http\Controllers\Admin\AdminDatewiseRoomController;
+use App\Http\Controllers\Admin\AdminSubscriberController;
 
 // A-L-L   C-U-S-T-O-M-E-R    R-O-U-T-E
 use App\Http\Controllers\Customer\CustomerAuthController;
 use App\Http\Controllers\Customer\CustomerHomeController;
+use App\Http\Controllers\Admin\AdminTestimonialController;
 use App\Http\Controllers\Customer\CustomerOrderController;
+use App\Http\Controllers\Admin\AdminDatewiseRoomController;
 use App\Http\Controllers\Customer\CustomerProfileController;
 
 
@@ -124,7 +126,13 @@ Route::get('admin/logout',[AdminLoginController::class,'logout'])->name('admin_l
 
 Route::group(['middleware'=>['admin:admin']],function(){
 
+
+    /* P R O F I L E */
     
+    Route::get('/admin/edit-profile', [AdminProfileController::class, 'index'])->name('admin_profile');
+    Route::post('/admin/edit-profile-submit', [AdminProfileController::class, 'profile_submit'])->name('admin_profile_submit');
+
+
     /* A M E N I T Y */
 
     Route::get('/admin/amenity/show',[AmenityController::class,'show'])->name('admin_amenity_show');
@@ -228,6 +236,14 @@ Route::group(['middleware'=>['admin:admin']],function(){
     Route::get('/admin/faq/edit/{id}', [AdminFaqController::class, 'edit'])->name('admin_faq_edit');
     Route::post('/admin/faq/update/{id}', [AdminFaqController::class, 'update'])->name('admin_faq_update');
     Route::get('/admin/faq/delete/{id}', [AdminFaqController::class, 'delete'])->name('admin_faq_delete');
+
+
+    /* S U B S C R I B E R */
+
+    Route::get('/admin/subscriber/show', [AdminSubscriberController::class, 'show'])->name('admin_subscriber_show');
+    Route::get('/admin/subscriber/send-email', [AdminSubscriberController::class, 'send_email'])->name('admin_subscriber_send_email');
+    Route::post('/admin/subscriber/send-email-submit', [AdminSubscriberController::class, 'send_email_submit'])->name('admin_subscriber_send_email_submit');
+
 
 
 });

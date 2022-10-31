@@ -1,6 +1,6 @@
 @extends('front.layout.app')
 
-@section('content')
+@section('main_content')
 <div class="page-top">
     <div class="bg"></div>
     <div class="container">

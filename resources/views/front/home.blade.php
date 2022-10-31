@@ -16,7 +16,7 @@
             <div class="text">
                 <h2>Best Hotel in the City</h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt libero voluptate, veritatis esse dolorem soluta.
+                    All staff are incredibly helpful, friendly and professional. Rooms are very clean, comfortable and well equipped. Restaurant does a great breakfast, food is great, gym and club as well.
                 </p>
                 <div class="button">
                     <a href="{{ route('about') }}">Read More</a>
@@ -28,7 +28,7 @@
             <div class="text">
                 <h2>Quality rooms for the guests</h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt libero voluptate, veritatis esse dolorem soluta.
+                    Two bedrooms one living and one dinning and kitchenet. Two bathrooms with bathtubs and shower enclosure alongside. Came with three TVs and three Refrigerators. Well decorated and tastefully done as well.
                 </p>
                 <div class="button">
                     <a href="">Read More</a>
