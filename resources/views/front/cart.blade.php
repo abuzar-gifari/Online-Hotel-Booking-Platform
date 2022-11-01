@@ -73,10 +73,17 @@
                             }
 
                             $total_price = 0;
+
                             for($i=0;$i<count($arr_cart_room_id);$i++)
                             {
                                 $room_data = DB::table('rooms')->where('id',$arr_cart_room_id[$i])->first();
-                                @endphp
+
+
+                            @endphp
+                            // PHP End
+
+
+                                
                                 <tr>
                                     <td>
                                         <a href="{{ route('cart_delete',$arr_cart_room_id[$i]) }}" class="cart-delete-link" onclick="return confirm('Are you sure?');"><i class="fa fa-times"></i></a>
@@ -106,10 +113,15 @@
                                     @endphp
                                     </td>
                                 </tr>
-                                @php
-                                $total_price = $total_price+($room_data->price*$diff);
-                            }
-                            @endphp                            
+
+
+                            @php
+                            
+                            $total_price = $total_price+($room_data->price*$diff);
+                            
+                            } // For Loop End
+                            
+                            @endphp
                             <tr>
                                 <td colspan="8" class="tar">Total:</td>
                                 <td>${{ $total_price }}</td>
@@ -118,9 +130,6 @@
                     </table>
                 </div>
 
-                {{-- <div class="checkout mb_20">
-                    <a href="{{ route('checkout') }}" class="btn btn-primary bg-website">Checkout</a>
-                </div> --}}
 
                 @else
 

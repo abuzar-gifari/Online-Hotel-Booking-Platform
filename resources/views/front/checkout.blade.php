@@ -20,6 +20,9 @@
                     @csrf
                     <div class="billing-info">
                         <h4 class="mb_30">Billing Information</h4>
+
+
+
                         @php
                         if(session()->has('billing_name')) {
                             $billing_name = session()->get('billing_name');
@@ -69,6 +72,9 @@
                             $billing_zip = Auth::guard('customer')->user()->zip;
                         }
                         @endphp
+                        
+                        
+                        
                         <div class="row">
                             <div class="col-lg-6">
                                 <label for="">Name: *</label>
@@ -107,6 +113,13 @@
                     <button type="submit" class="btn btn-primary bg-website mb_30">Continue to payment</button>
                 </form>
             </div>
+
+
+            <!-- ----------------------------- -->
+            
+
+            <!-- ------- Cart Details -------- -->
+            
             <div class="col-lg-4 col-md-6 checkout-right">
                 <div class="inner">
                     <h4 class="mb_10">Cart Details</h4>
@@ -154,8 +167,13 @@
                                 for($i=0;$i<count($arr_cart_room_id);$i++)
                                 {
                                     $room_data = DB::table('rooms')->where('id',$arr_cart_room_id[$i])->first();
-                                    @endphp
+                                    
+                                    
+                                @endphp
+                                // PHP End
 
+                                    
+                                
                                     <tr>
                                         <td>
                                             {{ $room_data->name }}
@@ -177,10 +195,20 @@
                                             @endphp
                                         </td>
                                     </tr>
-                                    @php
-                                    $total_price = $total_price+($room_data->price*$diff);
-                                }
-                                @endphp                                
+
+
+
+                                @php // PHP Open
+                                
+                                $total_price = $total_price+($room_data->price*$diff);
+                                
+                                } // For Lopp End
+                                
+                                @endphp <!-- PHP End -->                               
+                                
+                                
+                                
+                                
                                 <tr>
                                     <td><b>Total:</b></td>
                                     <td class="p_price"><b>${{ $total_price }}</b></td>
