@@ -84,7 +84,5 @@
 @endif
 <!--// iziToast functionality code here -->
 
-
-
 </body>
 </html>

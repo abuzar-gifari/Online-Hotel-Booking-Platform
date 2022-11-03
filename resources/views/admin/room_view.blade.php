@@ -9,7 +9,7 @@
                     <div class="table-responsive">
                         <table class="table table-bordered" id="example1">
                             <thead>
-                            <tr>
+                            <tr style="text-align: center">
                                 <th>SL</th>
                                 <th>Photo</th>
                                 <th>Name</th>
@@ -21,7 +21,7 @@
                                 @php $i=0; @endphp
                                 @foreach ($rooms as $row)
                                 @php $i++; @endphp
-                                <tr>
+                                <tr style="text-align: center">
                                     <td>{{ $loop->iteration }}</td>
                                     <td>
                                         <img src="{{ asset('uploads/'.$row->featured_photo) }}" class="w_200">
@@ -29,10 +29,10 @@
                                     <td>{{ $row->name }}</td>
                                     <td>${{ $row->price }}</td>
                                     <td class="pt_10 pb_10">
-                                        <button class="btn btn-success" data-toggle="modal" data-target="#exampleModal{{ $i }}">Detail</button>
-                                        <a href="{{ route('admin_room_gallery',$row->id) }}" class="btn btn-warning">Photo Gallery</a>
-                                        <a href="{{ route('admin_room_edit',$row->id) }}" class="btn btn-primary">Edit</a>
-                                        <a href="{{ route('admin_room_delete',$row->id) }}" class="btn btn-danger" onClick="return confirm('Are you sure?');">Delete</a>
+                                        <button class="btn btn-success" data-toggle="modal" data-target="#exampleModal{{ $i }}"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                                        <a href="{{ route('admin_room_gallery',$row->id) }}" class="btn btn-warning"> <i class="fa fa-image"></i> </a>
+                                        <a href="{{ route('admin_room_edit',$row->id) }}" class="btn btn-primary"><i class="fas fa-edit"></i></a>
+                                        <a href="{{ route('admin_room_delete',$row->id) }}" class="btn btn-danger" onClick="return confirm('Are you sure?');"><i class="fas fa-trash-alt"></i></a>
                                     </td>
                                 </tr>
 

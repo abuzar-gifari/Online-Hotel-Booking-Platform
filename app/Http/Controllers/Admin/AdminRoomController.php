@@ -107,13 +107,11 @@ class AdminRoomController extends Controller
     public function update(Request $request,$id){
 
         $request->validate([
-            'featured_photo' => 'required',
             'name' => 'required',
             'description' => 'required',
             'price' => 'required',
             'total_rooms' => 'required',
         ],[
-            'featured_photo.required' => 'Photo is required',
             'name.required' => 'Name is required',
             'description.required' => 'Description is required',
             'price.required' => 'Price is required',

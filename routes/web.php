@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 // A-L-L   F-R-O-N-T-E-N-D    R-O-U-T-E
 use App\Http\Controllers\Front\FaqController;
+use App\Http\Controllers\Front\BlogController;
 use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\Front\RoomController;
 use App\Http\Controllers\Front\AboutController;
@@ -13,9 +14,9 @@ use App\Http\Controllers\Front\VideoController;
 use App\Http\Controllers\Admin\AmenityController;
 use App\Http\Controllers\Front\BookingController;
 use App\Http\Controllers\Front\ContactController;
-use App\Http\Controllers\Admin\AdminFaqController;
 
 // A-L-L   A-D-M-I-N    R-O-U-T-E
+use App\Http\Controllers\Admin\AdminFaqController;
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AdminPostController;
 use App\Http\Controllers\Admin\AdminRoomController;
@@ -27,9 +28,9 @@ use App\Http\Controllers\Front\SubscriberController;
 use App\Http\Controllers\Admin\AdminFeatureController;
 use App\Http\Controllers\Admin\AdminProfileController;
 use App\Http\Controllers\Admin\AdminCustomerController;
-use App\Http\Controllers\Admin\AdminSubscriberController;
 
 // A-L-L   C-U-S-T-O-M-E-R    R-O-U-T-E
+use App\Http\Controllers\Admin\AdminSubscriberController;
 use App\Http\Controllers\Customer\CustomerAuthController;
 use App\Http\Controllers\Customer\CustomerHomeController;
 use App\Http\Controllers\Admin\AdminTestimonialController;

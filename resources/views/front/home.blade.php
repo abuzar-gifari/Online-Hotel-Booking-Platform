@@ -323,6 +323,7 @@
 
 <!-- Post Portion -->
 
+
 <div class="blog-item">
     <div class="container">
         <div class="row">
@@ -331,63 +332,37 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
-                <div class="inner">
-                    <div class="photo">
-                        <img src="uploads/1.jpg" alt="">
-                    </div>
-                    <div class="text">
-                        <h2><a href="post.html">King Room - SGL - Traditional Comfort</a></h2>
-                        <div class="short-des">
-                            <p>
-                                These rooms generally have the largest bed in a property. Typically, standard king size mattresses are 80 inches long (or about 203 centimetres) and 76 inches wide (or about 193 centimetres).
-                            </p>
+
+            @foreach($post_all as $item)
+            
+            
+                <div class="col-md-4">
+                    <div class="inner">
+                        <div class="photo">
+                            <img src="{{ asset('uploads/'.$item->photo) }}" alt="">
                         </div>
-                        <div class="button">
-                            <a href="post.html" class="btn btn-primary">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="inner">
-                    <div class="photo">
-                        <img src="uploads/2.jpg" alt="">
-                    </div>
-                    <div class="text">
-                        <h2><a href="post.html">Deluxe Double Room in Dhaka</a></h2>
-                        <div class="short-des">
-                            <p>
-                                Mainly designed to accommodate the needs of guests that wish to share a bed. There are a few differences between hotels and motels, a standard double room contains one king-size bed.
-                            </p>
-                        </div>
-                        <div class="button">
-                            <a href="post.html" class="btn btn-primary">Read More</a>
+                        <div class="text">
+                            <h2><a href="{{ route('post',$item->id) }}">{{ $item->heading }}</a></h2>
+                            <div class="short-des">
+                                <p>
+                                    {!! $item->short_content !!}
+                                </p>
+                            </div>
+                            <div class="button">
+                                <a href="{{ route('post',$item->id) }}" class="btn btn-primary">Read More</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="inner">
-                    <div class="photo">
-                        <img src="uploads/3.jpg" alt="">
-                    </div>
-                    <div class="text">
-                        <h2><a href="post.html">Standard Queen Room - The Grove Inn</a></h2>
-                        <div class="short-des">
-                            <p>
-                                Rooms range from standard, with one queen bed, to deluxe, with a king bed, for those who would like some extra space. A few rooms have enough floor space to fit a third bed, such as if traveling with a child.
-                            </p>
-                        </div>
-                        <div class="button">
-                            <a href="post.html" class="btn btn-primary">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+
+            @endforeach
+            
         </div>
     </div>
 </div>
+
+
 
 <!--// Post Portion -->
 

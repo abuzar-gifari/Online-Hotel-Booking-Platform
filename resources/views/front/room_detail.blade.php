@@ -49,7 +49,7 @@
                             { 
                                 $temp_row = \App\Models\Amenity::where('id',$arr[$j])->first();
                                 echo '<div class="col-lg-6 col-md-12">';
-                                echo '<div class="item"><i class="fa fa-check-circle"></i>'.$temp_row->name.'</div>';
+                                echo '<div class="item"><i class="fa fa-check-circle"></i>&nbsp;'.$temp_row->name.'</div>';
                                 echo '</div>';
                             }
                         @endphp
@@ -127,15 +127,6 @@
                         </form>
 
 
-                    </div>
-
-
-                    <div class="widget">
-                        <h2>Total</h2>
-                        <div class="price">
-                            $230
-                        </div>
-                        <button type="submit" class="book-now">Add to Cart</button>
                     </div>
                 </div>
             </div>
